@@ -9,5 +9,12 @@ const isPrimeNumber = (n, i = 3) => {
 
 console.log(isPrimeNumber(7));
 
+const findSupPrime = (n) => {
+    if (isPrimeNumber(n)) {
+        return n;
+    } else {
+        return findSupPrime(n - 1);
+    }
+};
 
-const findSupPrime = (n) => {}
+console.log(findSupPrime(7));
